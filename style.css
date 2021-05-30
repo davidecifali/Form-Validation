@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #1a2980, #26d0ce);
+  font-family: "Inconsolata", monospace;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    width: 35%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      width: 75%;
+    }
+  }
+  
+  @media only screen and (max-width: 360px) {
+    .container {
+      width: 100%;
+      border-radius: 0;
+    }
+    ::placeholder {
+      font-size: 0.6rem;
+    }
+  }
+
+  .header {
+    padding: 30px 40px;
+    padding-bottom: 20px;
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+  
+  .form {
+    padding: 30px 40px;
+    padding-top: 20px;
+  }
+
+  .form-control {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  .form-control input {
+    font-family: inherit;
+    font-size: 0.9rem;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
+  
+  .form-control input:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  .form-control.success input {
+    border-color: #40d47e;
+  }
+  
+  .form-control.error input {
+    border-color: #e74c3c;
+  }
+
+  .form-control i {
+    position: absolute;
+    top: 33px;
+    right: 10px;
+    visibility: hidden;
+  }
+  
+  .form-control.success i.fa-check-circle {
+    visibility: visible;
+    color: #40d47e;
+  }
+
+  .form-control.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: #e74c3c;
+  }
+  
+  .form-control small {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+  }
+
+  .form-control.error small {
+    visibility: visible;
+    color: #e74c3c;
+  }
+
+  .form button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #38c1c0;
+    color: rgb(255, 255, 255);
+    font-family: inherit;
+    font-size: 1.1rem;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .form button:hover {
+    background-color: #1b9594;
+  }
